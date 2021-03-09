@@ -1,1 +1,4 @@
-
+{
+  "variables": {
+    "aws_region": "{{env `AWS_REGION`}}",
+    "aws_ami_name": "amazon-linux_{{isotime \0}}
