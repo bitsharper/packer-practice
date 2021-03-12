@@ -4,7 +4,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - timestamp = `date "+%Y%m%d"`
+      - export timestamp = `date "+%Y%m%d"`
       - echo "Installing HashiCorp Packer..."
       - curl -qL -o packer.zip https://releases.hashicorp.com/packer/1.7.0/packer_1.7.0_linux_amd64.zip && unzip packer.zip
       - ls -al
