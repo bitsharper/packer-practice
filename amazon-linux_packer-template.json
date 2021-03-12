@@ -1,7 +1,7 @@
 {
   "variables": {
     "aws_region": "{{env `AWS_REGION`}}",
-    "aws_ami_name": "amazon-linux_{{isotime \"10March2020\"}}"
+    "aws_ami_name": "amazon-linux_{{datetime }}"
   },
   "builders": [{
     "type": "amazon-ebs",
