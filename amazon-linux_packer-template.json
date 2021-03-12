@@ -22,7 +22,8 @@
       },
       "tags": {
         "Name": "AmazonLinux",
-        "projectName": "Codebuild and Packer"
+        "projectName": "Codebuild and Packer",
+        "creationDate": "{{timestamp}}"
       }
     }],
   "provisioners": [
