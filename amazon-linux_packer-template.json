@@ -24,7 +24,7 @@
       "tags": {
         "Name": "AmazonLinux",
         "projectName": "Codebuild and Packer",
-        "creationDate": "{{timestamp}}"
+        "creationDate": "{{user `time_stamp`}}"
       }
     }],
   "provisioners": [
