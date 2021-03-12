@@ -1,7 +1,7 @@
 {
   "variables": {
     "aws_region": "{{env `AWS_REGION`}}",
-    "aws_ami_name": "amazon-linux_{{user `time_stamp`}}",
+    "aws_ami_name": "amazon-linux_",
     "time_stamp": null
   },
   "builders": [{
@@ -9,7 +9,7 @@
     "region": "{{user `aws_region`}}",
     "instance_type": "t2.micro",
     "ssh_username": "ec2-user",
-    "ami_name": "{{user `aws_ami_name`}}",
+    "ami_name": "{{user `aws_ami_name`}}{{user `time_stamp` | clean_resource_name}}",
     "ami_description": "Customized Amazon Linux",
     "associate_public_ip_address": "true",
     "source_ami_filter": {
