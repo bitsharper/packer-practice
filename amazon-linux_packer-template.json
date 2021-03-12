@@ -2,14 +2,14 @@
   "variables": {
     "aws_region": "{{env `AWS_REGION`}}",
     "aws_ami_name": "amazon-linux_",
-    "currentTime": null
+    "time_stamp": null
   },
   "builders": [{
     "type": "amazon-ebs",
     "region": "{{user `aws_region`}}",
     "instance_type": "t2.micro",
     "ssh_username": "ec2-user",
-    "ami_name": "{{user `aws_ami_name`}}{{user currentTime}}",
+    "ami_name": "{{user `aws_ami_name`}}{{user time_stamp}}",
     "ami_description": "Customized Amazon Linux",
     "associate_public_ip_address": "true",
     "source_ami_filter": {

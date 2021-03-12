@@ -4,7 +4,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - export currentTime = `date "+%Y%m%d"`
+      - export time_stamp=`date "+%Y%m%d"`
       - echo "Installing HashiCorp Packer..."
       - curl -qL -o packer.zip https://releases.hashicorp.com/packer/1.7.0/packer_1.7.0_linux_amd64.zip && unzip packer.zip
       - ls -al
@@ -23,7 +23,7 @@ phases:
       - aws configure set aws_secret_access_key `./jq -r '.SecretAccessKey' aws_credentials.json`
       - aws configure set aws_session_token `./jq -r '.Token' aws_credentials.json`
       - echo "Building Hashicorp packer template, amazon-linux_packer-template.json"
-      - ./packer build -var currentTime=${currentTime} amazon-linux_packer-template.json
+      - ./packer build -var time_stamp=${time_stamp} amazon-linux_packer-template.json
   post_build:
     commands:
       - echo Build completed on `date`
