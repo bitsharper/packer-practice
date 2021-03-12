@@ -24,7 +24,7 @@
       "tags": {
         "Name": "AmazonLinux",
         "projectName": "Codebuild and Packer",
-        "creationDate": "{{user `time_stamp`}}"
+        "creationDate": "{{isotime \"12-03-2006\"}}"
       }
     }],
   "provisioners": [
