@@ -19,6 +19,10 @@
       },
       "owners": ["137112412989", "591542846629", "801119661308", "102837901569", "013907871322", "206029621532", "286198878708", "443319210888"],
       "most_recent": true
+      },
+      "tags": {
+        "Name": "AmazonLinux",
+        "projectName": "Codebuild and Packer"
       }
     }],
   "provisioners": [
