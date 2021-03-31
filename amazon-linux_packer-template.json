@@ -31,6 +31,14 @@
   "provisioners": [
     {
       "type": "shell",
+      "execute_command": "sudo -S bash '{{.Path}}'",
+      "inline": [
+        "echo '{{.Path}}'",
+        "echo '{{.Vars}}'"
+      ]
+    },
+    {
+      "type": "shell",
       "inline": [
         "sudo yum update -y",
         "sudo /usr/sbin/update-motd --disable",
